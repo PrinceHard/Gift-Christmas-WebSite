@@ -138,7 +138,7 @@ img{
 @media screen and (max-width: 768px){
     .nav__menu{
         position: fixed;
-        top: var(--header-height);
+        top: -100%;
         left: 0;
         right: 0;
         width: 90%;
@@ -177,4 +177,8 @@ img{
 .nav__toggle{
     font-size: 1.3rem;
     cursor: pointer;
+}
+
+.show-menu{
+    top: calc(var(--header-height) + 1rem);
 }
