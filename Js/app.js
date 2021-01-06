@@ -12,3 +12,13 @@ const showMenu = (toggleId, navId) =>{
     }
 } 
 showMenu('nav-toggle', 'nav-menu')
+
+/*  Remove Menu Mobile  */
+const navLink = document.querySelectorAll('.nav__link')
+
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    //Quando nós clicamos em cada nav__link, nós removemos a class show-menu
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
