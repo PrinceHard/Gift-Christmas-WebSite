@@ -264,3 +264,19 @@ img{
 .button:hover{
     background-color: var(--first-color-alt);
 }
+
+/*  SHARE  */
+.share__data{
+    text-align: center;
+}
+
+.share__description{
+    margin-bottom: var(--mb-2);
+}
+
+.share__img{
+    width: 280px;
+    justify-self: center;
+    margin: 0 auto;
+}
+
