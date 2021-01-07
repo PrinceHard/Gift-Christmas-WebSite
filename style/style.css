@@ -224,3 +224,8 @@ img{
     font-size: 1.5rem;
     color: var(--body-color);
 }
+
+.show-scroll{
+    visibility: visible;
+    bottom: 1.5rem;
+}

@@ -47,11 +47,16 @@ window.addEventListener('scroll', scrollActive)
 /*  Change Background Header  */
 function scrollHeader(){
     const nav = document.getElementById('header')
-    //quando o scroll for maior que 200 viewport height, adiciona a classe scroll-header
-    if(this.scrollY >= 200){
-        nav.classList.add('scroll-header')
-    }else{
-        nav.classList.remove('scroll-header')
-    }
+    //quando o scroll for maio que 200vh, adicionamos a classe scroll-header
+    if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+/*  Show Scroll Top  */
+function scrollTop(){
+    const scrollTop = document.getElementById('scroll-top');
+    //quando o scroll for maior que 560vh, adicione a class show-scroll a tag com a classe scroll-top
+    if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+
+}
+window.addEventListener('scroll', scrollTop)
