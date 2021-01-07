@@ -42,3 +42,11 @@ function scrollActive(){
     })   
 }
 window.addEventListener('scroll', scrollActive)
+
+/*  Change Background Header  */
+function scrollHeader(){
+    const nav = document.getElementById('header')
+    //quando o scroll for maio que 200vh, adicionamos a classe scroll-header
+    if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
