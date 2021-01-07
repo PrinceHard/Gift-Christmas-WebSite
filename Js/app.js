@@ -26,8 +26,9 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*  Scroll Section Active Link  */
 const sections = document.querySelectorAll('section[id]')
 
+
 function scrollActive(){
-    const scrollY = windows.pageYOffset
+    const scrollY = window.pageYOffset
 
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
@@ -42,3 +43,15 @@ function scrollActive(){
     })   
 }
 window.addEventListener('scroll', scrollActive)
+
+/*  Change Background Header  */
+function scrollHeader(){
+    const nav = document.getElementById('header')
+    //quando o scroll for maior que 200 viewport height, adiciona a classe scroll-header
+    if(this.scrollY >= 200){
+        nav.classList.add('scroll-header')
+    }else{
+        nav.classList.remove('scroll-header')
+    }
+}
+window.addEventListener('scroll', scrollHeader)
