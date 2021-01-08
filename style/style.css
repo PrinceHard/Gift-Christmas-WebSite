@@ -272,6 +272,7 @@ img{
 }
 
 .button-link:hover{
+    background: transparent;
     color: var(--first-color-alt);
 }
 
