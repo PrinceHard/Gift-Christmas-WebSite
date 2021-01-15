@@ -546,6 +546,11 @@ img{
         display: none;
     }
 
+    .change-theme{
+        position: initial;
+        margin-left: var(--mb-4);
+    }
+
     .home__container{
         padding: 7rem 2rem 0;
     }

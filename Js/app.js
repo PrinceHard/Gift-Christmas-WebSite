@@ -61,3 +61,33 @@ function scrollTop(){
 }
 window.addEventListener('scroll', scrollTop)
 
+
+/*  DARK LIGHT THEME  */
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'bx-toggle-right'
+
+// Tópico selecionado anteriormente (se o usuário selecionou)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// Obtemos o tema atual que a interface possui validando a classe dark-theme
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark': 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-toggle-left' : 'bx-toggle-right'
+
+// Validamos se o usuário previamente escolheu um tópico
+if (selectedTheme) {
+    // Se a validação for cumprida, perguntamos qual era o problema para saber se ativamos ou desativamos o escuro
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'bx-toggle-left' ? 'add' : 'remove'](iconTheme)
+}
+
+// Ativa e Desativa o tema manualmente com o botão 
+themeButton.addEventListener('click', () => {
+    // Adiciona ou remove o dark/ icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // Salvamos o tema e o icone atual que o usuário escolher
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
